@@ -32,8 +32,6 @@ public class MainActivity extends Activity {
                 idStr = idEdit.getText().toString();
                 passStr = passEdit.getText().toString();
 
-
-
                 Intent intent = new Intent(getApplicationContext(),
                         members.class);
 
@@ -72,6 +70,17 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),
                         Signup.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        TextView CTWTextView4 = (TextView) findViewById(R.id.CTWTextView4);
+        CTWTextView4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),
+                        FindPW.class);
                 startActivity(intent);
                 finish();
             }
