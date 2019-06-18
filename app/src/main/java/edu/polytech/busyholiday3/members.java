@@ -16,7 +16,12 @@ public class members extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_members);
-        finish();
 
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 }

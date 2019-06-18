@@ -1,6 +1,5 @@
 package edu.polytech.busyholiday3;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,27 +11,27 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends Activity {
-
+public class MainActivity extends AppCompatActivity {
+    EditText idEdit, passEdit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        idEdit = (EditText) findViewById(R.id.CTWEditText1);
+        passEdit = (EditText) findViewById(R.id.CTWEditText2);
+
         Button CTWButton1 = (Button) findViewById(R.id.CTWButton1);
         CTWButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText idEdit, passEdit;
-
-                idEdit = (EditText) findViewById(R.id.CTWEditText1);
-                passEdit = (EditText) findViewById(R.id.CTWEditText2);
 
                 String idStr, passStr;
                 idStr = idEdit.getText().toString();
                 passStr = passEdit.getText().toString();
 
-                Intent intent = new Intent(getApplicationContext(),
+                Intent intent1 = new Intent(getApplicationContext(),
                         members.class);
 
 //                intent.putExtra("inputID", idStr);
@@ -48,7 +47,7 @@ public class MainActivity extends Activity {
 
                 Toast.makeText(MainActivity.this, resultText,Toast.LENGTH_LONG).show();
                 if (resultText.equals("로그인이 성공하였습니다.")) {
-                    startActivityForResult(intent, 1000);
+                    startActivityForResult(intent1, 1000);
                 }
             }
         });
@@ -57,10 +56,9 @@ public class MainActivity extends Activity {
         CTWButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),
+                Intent intent2 = new Intent(getApplicationContext(),
                         nomembers.class);
-                startActivity(intent);
-                finish();
+                startActivity(intent2);
             }
         });
 
@@ -68,10 +66,9 @@ public class MainActivity extends Activity {
         CTWTextView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),
+                Intent intent3 = new Intent(getApplicationContext(),
                         Signup.class);
-                startActivity(intent);
-                finish();
+                startActivity(intent3);
             }
         });
 
@@ -79,10 +76,9 @@ public class MainActivity extends Activity {
         CTWTextView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),
+                Intent intent4 = new Intent(getApplicationContext(),
                         FindPW.class);
-                startActivity(intent);
-                finish();
+                startActivity(intent4);
             }
         });
     }
