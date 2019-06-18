@@ -24,7 +24,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="이름"
+                    android:text="아이디"
                     android:layout_alignLeft="@+id/SUEditText1"
                     android:layout_above="@id/SUEditText1"
                     android:layout_marginTop="90dp"
@@ -37,7 +37,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/back"
-                    android:hint="사용하실 이름을 입력해주세요"
+                    android:hint="사용하실 아이디를 입력해주세요"
                     android:textSize="17dp"/>
 
                 <TextView
@@ -95,6 +95,7 @@
                     android:textSize="17dp"/>
 
                 <Button
+                    android:id="@+id/SUButton1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="가입 완료"
