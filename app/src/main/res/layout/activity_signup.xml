@@ -55,7 +55,8 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/back"
                     android:hint="비밀번호를 입력해주세요"
-                    android:textSize="17dp"/>
+                    android:textSize="17dp"
+                    android:password="true"/>
 
                 <EditText
                     android:id="@+id/SUEditText3"
@@ -65,7 +66,8 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/back"
                     android:hint="비밀번호를 확인합니다"
-                    android:textSize="17dp"/>
+                    android:textSize="17dp"
+                    android:password="true"/>
 
                 <TextView
                     android:layout_width="wrap_content"

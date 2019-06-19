@@ -32,7 +32,7 @@
                 android:id="@+id/MAImageView1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/rabbit"/>
+                android:src="@drawable/rabbit"/>
 
 
 
@@ -75,7 +75,8 @@
                     android:layout_marginRight="80dp"
                     android:layout_gravity="center"
                     android:hint="Password"
-                    android:background="@drawable/back"/>
+                    android:background="@drawable/back"
+                    android:password="true"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
