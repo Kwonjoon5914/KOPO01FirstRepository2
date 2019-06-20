@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="edu.polytech.busyholiday3">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".FindPW"></activity>
-        <activity android:name=".Signup" />
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config">
+        <activity android:name=".FindPW" />
+        <activity android:name=".Signup" >
+
+
+        </activity>
+
         <activity android:name=".members" />
         <activity android:name=".nomembers" />
         <activity android:name=".MainActivity">

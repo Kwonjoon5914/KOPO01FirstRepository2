@@ -27,7 +27,7 @@
                     android:text="아이디"
                     android:layout_alignLeft="@+id/SUEditText1"
                     android:layout_above="@id/SUEditText1"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="20dp"
                     android:textSize="18dp"/>
 
                 <EditText
@@ -35,16 +35,16 @@
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/back"
                     android:hint="사용하실 아이디를 입력해주세요"
-                    android:textSize="17dp"/>
+                    android:textSize="17dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="비밀번호"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="20dp"
                     android:textSize="18dp"/>
 
                 <EditText
@@ -52,7 +52,7 @@
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/back"
                     android:hint="비밀번호를 입력해주세요"
                     android:textSize="17dp"
@@ -63,7 +63,7 @@
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/back"
                     android:hint="비밀번호를 확인합니다"
                     android:textSize="17dp"
@@ -72,8 +72,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="이메일 주소"
-                    android:layout_marginTop="50dp"
+                    android:text="이름"
+                    android:layout_marginTop="20dp"
                     android:textSize="18dp"/>
 
                 <EditText
@@ -81,26 +81,33 @@
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/back"
-                    android:hint="이메일 주소를 입력해주세요"
-                    android:textSize="17dp"/>
+                    android:hint="이름을 입력해 주세요"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이메일 주소"
+                    android:layout_marginTop="20dp"
+                    android:textSize="18dp"/>
 
                 <EditText
                     android:id="@+id/SUEditText5"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/back"
-                    android:hint="이메일 주소를 확인합니다"
-                    android:textSize="17dp"/>
+                    android:hint="이메일 주소를 입력해주세요"
+                    android:textSize="17dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="핸드폰 번호"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="20dp"
                     android:textSize="18dp"/>
 
                 <EditText
@@ -108,22 +115,45 @@
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/back"
-                    android:hint="핸드폰 번호를 입력해주세요"
+                    android:hint="'-'를 제외하고 입력해주세요"
                     android:textSize="17dp"/>
+
+                    <Button
+                        android:id="@+id/alertDialogMultipleCheckboxButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="관심 분야 선택"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/alertDialogTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="반드시 하나 이상의 관심분야를 선택해주세요"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textColor="#050E29"
+                    android:textSize="13dp"/>
 
                 <Button
                     android:id="@+id/SUButton1"
-                    android:layout_width="match_parent"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:text="가입 완료"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="10dp"
                     android:background="#CF5A5A"
                     android:textColor="#FFFFFF"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:layout_gravity="center"/>
 
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_main_result" />
 
             </LinearLayout>
 
