@@ -1,6 +1,7 @@
 package edu.polytech.busyholiday3;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -84,7 +85,7 @@ public class Signup extends Activity {
                 mEditName.setText("");
                 mEditEmail.setText("");
                 mEditPhone.setText("");
-
+                //로그인화면으로 넘어가기
                 Toast.makeText(Signup.this,"로그인 되었습니다" ,Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(),
                         members.class);
@@ -131,17 +132,17 @@ public class Signup extends Activity {
 
                 URL url = new URL(serverURL);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-
+                Log.d(TAG,"AAAAAAAAAAAAAAAAAAAAAAAAAAAA"+ serverURL);
                 httpURLConnection.setReadTimeout(5000);
                 httpURLConnection.setConnectTimeout(5000);
                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.connect();
-
+                Log.d(TAG,"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 outputStream.write(postParameters.getBytes("UTF-8"));
                 outputStream.flush();
                 outputStream.close();
-
+                Log.d(TAG,"CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
                 int responseStatusCode = httpURLConnection.getResponseCode();
                 Log.d(TAG, "POST response code - " + responseStatusCode);
 
